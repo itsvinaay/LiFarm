@@ -228,7 +228,7 @@ export function ProductGrid({ category }: ProductGridProps) {
   const products = productData[category] || [];
   
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4 md:px-0">
       {products.map((product) => (
         <Card key={product.id} className="overflow-hidden group hover:shadow-lg transition-all duration-300 p-0">
           <div className="relative h-36 overflow-hidden">

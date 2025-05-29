@@ -20,7 +20,7 @@ export default function Home() {
           />
         </div>
         <div className="container relative z-10">
-          <div className="max-w-3xl space-y-6 pl-4">
+          <div className="max-w-3xl space-y-6 px-4 md:px-0 lg:pl-4">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white drop-shadow-md">
               Freshness from Cambodian Farms, Delivered Worldwide
             </h1>
@@ -173,6 +173,25 @@ export default function Home() {
           </Button>
         </div>
       </section>
+
+      {/* WhatsApp Floating Button */}
+      <a
+        href="https://wa.me/85561608010"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 rounded-full shadow-lg p-4 flex items-center justify-center transition-colors"
+        aria-label="Chat on WhatsApp"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="white"
+          viewBox="0 0 24 24"
+        >
+          <path d="M12.004 2.003c-5.523 0-9.997 4.474-9.997 9.997 0 1.762.464 3.484 1.345 4.997l-1.409 5.151 5.273-1.384c1.478.805 3.153 1.236 4.788 1.236h.001c5.523 0 9.997-4.474 9.997-9.997s-4.474-9.997-9.997-9.997zm5.803 15.8c-.243.687-1.423 1.354-1.963 1.438-.502.08-1.145.114-1.845-.117-.426-.14-1.008-.328-1.747-.641-3.073-1.312-5.086-4.377-5.242-4.59-.154-.213-1.25-1.664-1.25-3.179 0-1.514.797-2.26 1.08-2.57.283-.31.617-.387.823-.387.206 0 .412.002.593.011.191.009.447-.072.7.535.253.607.857 2.099.933 2.253.076.154.127.336.025.549-.102.213-.153.336-.305.515-.153.18-.321.401-.457.54-.153.154-.312.32-.134.627.178.308.792 1.304 1.698 2.112 1.168 1.03 2.153 1.354 2.461 1.508.308.154.486.128.667-.076.18-.204.772-.899.98-1.206.208-.308.412-.254.7-.153.287.102 1.814.857 2.127 1.012.313.154.522.229.597.357.076.128.076.74-.167 1.427z"/>
+        </svg>
+      </a>
     </>
   )
 }

@@ -12,43 +12,25 @@ import { Mail, Phone, MessageSquare, Loader2 } from 'lucide-react'
 import { useToast } from "@/hooks/use-toast"
 
 export default function Contact() {
-  const { toast } = useToast()
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you as soon as possible.",
-      })
-      // Reset form here in a real implementation
-    }, 1500)
-  }
-  
   return (
     <>
       {/* Hero Section */}
       <section className="relative h-[40vh] min-h-[300px] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="https://images.pexels.com/photos/5499118/pexels-photo-5499118.jpeg" 
-            alt="Vegetables on a market display"
+            src="/assets/about/3.jpg" 
+            alt="Farm community collaboration"
             fill
             className="object-cover brightness-[0.85]"
             priority
           />
         </div>
-        <div className="container relative z-10 mx-auto">
+        <div className="container relative z-10 mx-auto px-4">
           <div className="max-w-3xl space-y-4">
             <h1 className="text-4xl sm:text-5xl font-bold text-white drop-shadow-md">
               Contact Us
             </h1>
-            <p className="text-xl text-white drop-shadow-md">
+            <p className="text-xl text-white/90 drop-shadow-md">
               Get in touch with our team to learn more about our products and services
             </p>
           </div>
@@ -56,51 +38,61 @@ export default function Contact() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Whether you're interested in our distribution services, export opportunities, 
-                or learning more about our farming initiatives, we're here to help. 
-                Fill out the form or use our contact information to reach out.
-              </p>
+      <section className="py-8 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12">
+            <div className="space-y-6 sm:space-y-8">
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Get In Touch</h2>
+                <p className="text-base sm:text-lg text-muted-foreground">
+                  Whether you're interested in our distribution services, export opportunities, 
+                  or learning more about our farming initiatives, we're here to help. 
+                  Fill out the form or use our contact information to reach out.
+                </p>
+              </div>
               
-              <div className="space-y-6">
-                <Card>
-                  <CardContent className="p-6 flex items-start gap-4">
-                    <div className="bg-emerald-100 dark:bg-emerald-900/30 p-3 rounded-full">
-                      <Phone className="h-6 w-6 text-emerald-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg">Phone</h3>
-                      <p className="text-muted-foreground">+855 61 60 80 10</p>
-                      <p className="text-muted-foreground">+855 16 60 80 10 (WhatsApp, Telegram)</p>
-                    </div>
-                  </CardContent>
-                </Card>
-                
-                <Card>
-                  <CardContent className="p-6 flex items-start gap-4">
-                    <div className="bg-emerald-100 dark:bg-emerald-900/30 p-3 rounded-full">
-                      <Mail className="h-6 w-6 text-emerald-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg">Email</h3>
-                      <p className="text-muted-foreground">Linauy2014@gmail.com</p>
+              <div className="grid gap-3 sm:gap-4">
+                <Card className="hover:shadow-md transition-shadow">
+                  <CardContent className="p-4 sm:p-6">
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div className="bg-emerald-100 dark:bg-emerald-900/30 p-2 sm:p-3 rounded-full shrink-0">
+                        <Phone className="h-5 w-5 sm:h-6 sm:w-6 text-emerald-600" />
+                      </div>
+                      <div className="space-y-1">
+                        <h3 className="font-semibold text-base sm:text-lg">Phone</h3>
+                        <div className="space-y-0.5">
+                          <p className="text-sm sm:text-base text-muted-foreground">+855 61 60 80 10</p>
+                          <p className="text-xs sm:text-sm text-muted-foreground">+855 16 60 80 10 (WhatsApp, Telegram)</p>
+                        </div>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
                 
-                <Card>
-                  <CardContent className="p-6 flex items-start gap-4">
-                    <div className="bg-emerald-100 dark:bg-emerald-900/30 p-3 rounded-full">
-                      <MessageSquare className="h-6 w-6 text-emerald-600" />
+                <Card className="hover:shadow-md transition-shadow">
+                  <CardContent className="p-4 sm:p-6">
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div className="bg-emerald-100 dark:bg-emerald-900/30 p-2 sm:p-3 rounded-full shrink-0">
+                        <Mail className="h-5 w-5 sm:h-6 sm:w-6 text-emerald-600" />
+                      </div>
+                      <div className="space-y-1">
+                        <h3 className="font-semibold text-base sm:text-lg">Email</h3>
+                        <p className="text-sm sm:text-base text-muted-foreground">Linauy2014@gmail.com</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-lg">Contact Person</h3>
-                      <p className="text-muted-foreground">Lina Uy</p>
+                  </CardContent>
+                </Card>
+                
+                <Card className="hover:shadow-md transition-shadow">
+                  <CardContent className="p-4 sm:p-6">
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div className="bg-emerald-100 dark:bg-emerald-900/30 p-2 sm:p-3 rounded-full shrink-0">
+                        <MessageSquare className="h-5 w-5 sm:h-6 sm:w-6 text-emerald-600" />
+                      </div>
+                      <div className="space-y-1">
+                        <h3 className="font-semibold text-base sm:text-lg">Contact Person</h3>
+                        <p className="text-sm sm:text-base text-muted-foreground">Lina Uy</p>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -109,35 +101,35 @@ export default function Contact() {
             
             <div>
               <Card>
-                <CardContent className="p-6 pt-6">
-                  <h3 className="font-bold text-xl mb-6">Send Us a Message</h3>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                <CardContent className="p-4 sm:p-6">
+                  <h3 className="font-bold text-lg sm:text-xl mb-4 sm:mb-6">Send Us a Message</h3>
+                  <form
+                    action="https://getform.io/f/bgdlpqma"
+                    method="POST"
+                    className="space-y-4 sm:space-y-6"
+                  >
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                       <div className="space-y-2">
-                        <Label htmlFor="firstName">First Name</Label>
-                        <Input id="firstName" placeholder="Enter your first name" required />
+                        <Label htmlFor="firstName" className="text-sm sm:text-base">First Name</Label>
+                        <Input id="firstName" name="firstName" placeholder="Enter your first name" required className="text-sm sm:text-base" />
                       </div>
-                      
                       <div className="space-y-2">
-                        <Label htmlFor="lastName">Last Name</Label>
-                        <Input id="lastName" placeholder="Enter your last name" required />
+                        <Label htmlFor="lastName" className="text-sm sm:text-base">Last Name</Label>
+                        <Input id="lastName" name="lastName" placeholder="Enter your last name" required className="text-sm sm:text-base" />
                       </div>
                     </div>
-                    
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
-                      <Input id="email" type="email" placeholder="Enter your email address" required />
+                      <Label htmlFor="email" className="text-sm sm:text-base">Email</Label>
+                      <Input id="email" name="email" type="email" placeholder="Enter your email address" required className="text-sm sm:text-base" />
                     </div>
-                    
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Phone Number</Label>
-                      <Input id="phone" placeholder="Enter your phone number" />
+                      <Label htmlFor="phone" className="text-sm sm:text-base">Phone Number</Label>
+                      <Input id="phone" name="phone" placeholder="Enter your phone number" className="text-sm sm:text-base" />
                     </div>
-                    
                     <div className="space-y-2">
-                      <Label htmlFor="inquiry">Inquiry Type</Label>
-                      <Select defaultValue="general">
-                        <SelectTrigger>
+                      <Label htmlFor="inquiry" className="text-sm sm:text-base">Inquiry Type</Label>
+                      <Select name="inquiry" defaultValue="general">
+                        <SelectTrigger className="text-sm sm:text-base">
                           <SelectValue placeholder="Select inquiry type" />
                         </SelectTrigger>
                         <SelectContent>
@@ -148,30 +140,22 @@ export default function Contact() {
                         </SelectContent>
                       </Select>
                     </div>
-                    
                     <div className="space-y-2">
-                      <Label htmlFor="message">Message</Label>
+                      <Label htmlFor="message" className="text-sm sm:text-base">Message</Label>
                       <Textarea 
                         id="message" 
+                        name="message"
                         placeholder="Please provide details about your inquiry..." 
-                        rows={5}
+                        rows={4}
                         required
+                        className="text-sm sm:text-base"
                       />
                     </div>
-                    
                     <Button 
                       type="submit" 
-                      className="w-full bg-emerald-600 hover:bg-emerald-700"
-                      disabled={isSubmitting}
+                      className="w-full bg-emerald-600 hover:bg-emerald-700 text-sm sm:text-base"
                     >
-                      {isSubmitting ? (
-                        <>
-                          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                          Sending...
-                        </>
-                      ) : (
-                        'Send Message'
-                      )}
+                      Send Message
                     </Button>
                   </form>
                 </CardContent>
@@ -180,7 +164,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-      
       {/* Google Map Section */}
       <section className="py-16 bg-gray-50 dark:bg-muted/20">
         <div className="container mx-auto">
@@ -192,18 +175,16 @@ export default function Contact() {
           </div>
           
           <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
-            {/* In a real implementation, embed an actual Google Map here */}
-            <div className="w-full h-full bg-muted relative flex items-center justify-center">
-              <Image 
-                src="https://images.pexels.com/photos/1732790/pexels-photo-1732790.jpeg" 
-                alt="Map placeholder"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                <p className="text-white text-lg">Interactive map would be displayed here</p>
-              </div>
-            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d251237.16391582278!2d104.72460114698394!3d11.579705121838408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109513dc76a6be3%3A0x9c010ee85ab525bb!2sPhnom%20Penh%2C%20Cambodja!5e0!3m2!1spt-PT!2sin!4v1748498063511!5m2!1spt-PT!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full"
+            ></iframe>
           </div>
         </div>
       </section>

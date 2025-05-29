@@ -32,9 +32,9 @@ export default function About() {
 
       {/* Our Story Section */}
       <section className="py-16">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row gap-12 items-center">
+            <div className="w-full lg:w-1/2 space-y-6">
               <h2 className="text-3xl font-bold">Our Story</h2>
               <p className="text-lg text-muted-foreground">
                 Founded in 2013, Lifarm began as an ambitious venture to revolutionize 
@@ -52,19 +52,20 @@ export default function About() {
                 freshness and quality of Cambodian produce to global markets through our 
                 export initiatives.
               </p>
-              <div className="pt-4 flex flex-col sm:flex-row gap-4">
+              <div className="pt-4">
                 <Button className="bg-emerald-600 hover:bg-emerald-700">
                   <Link href="/contact">Partner With Us</Link>
                 </Button>
               </div>
             </div>
             
-            <div className="relative h-[500px] rounded-lg overflow-hidden shadow-xl">
+            <div className="w-full lg:w-1/2 relative h-[300px] lg:h-[500px] rounded-lg overflow-hidden shadow-xl">
               <Image 
                 src="https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg" 
                 alt="Lifarm's agricultural initiatives"
                 fill
                 className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
           </div>
@@ -139,29 +140,87 @@ export default function About() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            <div className="relative h-60 rounded-lg overflow-hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 px-4 sm:px-0">
+            <div className="relative h-48 sm:h-60 rounded-lg overflow-hidden">
               <Image 
                 src="https://images.pexels.com/photos/2382665/pexels-photo-2382665.jpeg" 
                 alt="Farmers working in the field"
                 fill
                 className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                priority
               />
             </div>
-            <div className="relative h-60 rounded-lg overflow-hidden">
+            <div className="relative h-48 sm:h-60 rounded-lg overflow-hidden">
               <Image 
                 src="https://images.pexels.com/photos/2252584/pexels-photo-2252584.jpeg" 
                 alt="Fresh vegetables harvest"
                 fill
                 className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             </div>
-            <div className="relative h-60 rounded-lg overflow-hidden">
+            <div className="relative h-48 sm:h-60 rounded-lg overflow-hidden">
+              <Image 
+                src="/assets/about/1.jpg" 
+                alt="Farm community collaboration"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            </div>
+            <div className="relative h-48 sm:h-60 rounded-lg overflow-hidden">
+              <Image 
+                src="/assets/about/2.jpg" 
+                alt="Farm community collaboration"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            </div>
+            <div className="relative h-48 sm:h-60 rounded-lg overflow-hidden">
+              <Image 
+                src="/assets/about/3.jpg" 
+                alt="Farm community collaboration"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            </div>
+            <div className="relative h-48 sm:h-60 rounded-lg overflow-hidden">
+              <Image 
+                src="/assets/about/4.jpg" 
+                alt="Farm community collaboration"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            </div>
+            <div className="relative h-48 sm:h-60 rounded-lg overflow-hidden">
+              <Image 
+                src="/assets/about/5.jpg" 
+                alt="Farm community collaboration"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            </div>
+            <div className="relative h-48 sm:h-60 rounded-lg overflow-hidden">
+              <Image 
+                src="/assets/products/Dry tumeric/7.jpg" 
+                alt="Farm community collaboration"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            </div>
+            <div className="relative h-48 sm:h-60 rounded-lg overflow-hidden">
               <Image 
                 src="https://images.pexels.com/photos/2886937/pexels-photo-2886937.jpeg" 
                 alt="Community farming initiative"
                 fill
                 className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             </div>
           </div>

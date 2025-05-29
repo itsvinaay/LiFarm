@@ -77,44 +77,46 @@ export default function Products() {
       </section>
 
       {/* Export Information */}
-      <section id="export" className="py-16 bg-white dark:bg-background pl-4">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold">Export Opportunities</h2>
-              <p className="text-lg text-muted-foreground">
+      <section id="export" className="py-16 bg-white dark:bg-background px-4 md:px-6">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="space-y-6 order-2 lg:order-1">
+              <h2 className="text-2xl md:text-3xl font-bold">Export Opportunities</h2>
+              <p className="text-base md:text-lg text-muted-foreground">
                 We offer premium Cambodian agricultural products for international markets, 
                 ensuring the highest quality and reliability in every shipment.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-center gap-2">
-                  <div className="h-2 w-2 rounded-full bg-emerald-600"></div>
-                  <p>Premium quality agarwood and agricultural products</p>
+              <div className="space-y-3 md:space-y-4">
+                <div className="flex items-start gap-2">
+                  <div className="h-2 w-2 rounded-full bg-emerald-600 mt-2"></div>
+                  <p className="text-sm md:text-base">Premium quality agarwood and agricultural products</p>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="h-2 w-2 rounded-full bg-emerald-600"></div>
-                  <p>Professional logistics and shipping solutions</p>
+                <div className="flex items-start gap-2">
+                  <div className="h-2 w-2 rounded-full bg-emerald-600 mt-2"></div>
+                  <p className="text-sm md:text-base">Professional logistics and shipping solutions</p>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="h-2 w-2 rounded-full bg-emerald-600"></div>
-                  <p>Custom packaging and labeling services</p>
+                <div className="flex items-start gap-2">
+                  <div className="h-2 w-2 rounded-full bg-emerald-600 mt-2"></div>
+                  <p className="text-sm md:text-base">Custom packaging and labeling services</p>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="h-2 w-2 rounded-full bg-emerald-600"></div>
-                  <p>International standards compliance guaranteed</p>
+                <div className="flex items-start gap-2">
+                  <div className="h-2 w-2 rounded-full bg-emerald-600 mt-2"></div>
+                  <p className="text-sm md:text-base">International standards compliance guaranteed</p>
                 </div>
               </div>
-              <Button className="bg-emerald-600 hover:bg-emerald-700">
+              <Button className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700">
                 <Link href="/contact">Request Export Information</Link>
               </Button>
             </div>
             
-            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+            <div className="relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden shadow-xl order-1 lg:order-2 mb-6 lg:mb-0">
               <Image 
-                src="/assets/products/export-image.jpg" 
+                src="/assets/products/Cashew nut/3.jpg" 
                 alt="Premium product packaging"
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                priority
               />
             </div>
           </div>
