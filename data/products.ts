@@ -1,9 +1,4 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { Card, CardContent } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-
-const productData = {
+export const productData = {
   Agarwood: [
     {
       id: 'ag1',
@@ -15,7 +10,7 @@ const productData = {
       id: 'ag2',
       name: 'Agarwood Chips',
       description: 'Pure agarwood chips perfect for incense and aromatherapy.',
-      image: '/assets/products/Agarwood/cover.jpg'
+      image: '/assets/products/Agarwood/2.jpg'
     },
     {
       id: 'ag3',
@@ -218,29 +213,4 @@ const productData = {
       image: '/assets/products/Cashew nut/3.jpg'
     }
   ]
-};
-
-interface ProductGridProps {
-  category: 'Agarwood' | 'Dry Turmeric' | 'Dry Ginger' | 'Cashew Nut';
-}
-
-export function ProductGrid({ category }: ProductGridProps) {
-  const products = productData[category] || [];
-  
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
-      {products.map((product) => (
-        <Card key={product.id} className="overflow-hidden group hover:shadow-lg transition-all duration-300 p-0">
-          <div className="relative h-36 overflow-hidden">
-            <Image 
-              src={product.image}
-              alt={product.name}
-              fill
-              className="object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-          </div>
-        </Card>
-      ))}
-    </div>
-  );
-}
+}; 

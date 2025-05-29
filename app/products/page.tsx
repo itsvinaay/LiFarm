@@ -12,7 +12,8 @@ export default function Products() {
       <section className="relative h-[50vh] min-h-[400px] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/assets/products/hero-image.jpg" 
+            src="/assets/products/Cashew nut/cover.jpg" 
+            
             alt="Premium products display"
             fill
             className="object-cover brightness-[0.85]"
@@ -46,7 +47,7 @@ export default function Products() {
           <Tabs defaultValue="agarwood" className="space-y-8">
             <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-2 md:grid-cols-5">
               <TabsTrigger value="agarwood">Agarwood</TabsTrigger>
-              <TabsTrigger value="cambodia-oily-agarwood">Oily Agarwood</TabsTrigger>
+              {/* <TabsTrigger value="cambodia-oily-agarwood">Oily Agarwood</TabsTrigger> */}
               <TabsTrigger value="dry-turmeric">Dry Turmeric</TabsTrigger>
               <TabsTrigger value="dry-ginger">Dry Ginger</TabsTrigger>
               <TabsTrigger value="cashew-nut">Cashew Nut</TabsTrigger>
@@ -56,9 +57,9 @@ export default function Products() {
               <ProductGrid category="Agarwood" />
             </TabsContent>
             
-            <TabsContent value="cambodia-oily-agarwood">
+            {/* <TabsContent value="cambodia-oily-agarwood">
               <ProductGrid category="Cambodia Oily Agarwood" />
-            </TabsContent>
+            </TabsContent> */}
             
             <TabsContent value="dry-turmeric">
               <ProductGrid category="Dry Turmeric" />

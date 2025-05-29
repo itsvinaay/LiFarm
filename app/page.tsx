@@ -12,7 +12,7 @@ export default function Home() {
       <section className="relative h-[80vh] min-h-[600px] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="https://images.pexels.com/photos/2252584/pexels-photo-2252584.jpeg" 
+            src="/assets/products/Dry tumeric/1.jpg" 
             alt="Fresh vegetables at a farm"
             fill
             className="object-cover brightness-[0.85]"
@@ -118,7 +118,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
               <Image 
-                src="https://images.pexels.com/photos/2382665/pexels-photo-2382665.jpeg" 
+                src="/assets/products/Agarwood/1.jpg" 
                 alt="Farmers working in the field"
                 fill
                 className="object-cover w-full h-full"
